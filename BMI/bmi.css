@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #212121;
+}
+
+.main {
+  width: 50%;
+  height: 80vh;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.main h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.fill-form {
+  margin: 50px auto;
+}
+
+.fill-form .form {
+  margin: 10px 0 10px 0;
+}
+
+.container {
+  margin: 50px 0 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: white;
+}
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.ui-btn {
+  --btn-default-bg: rgb(37, 36, 36);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #fac921;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  margin: 10px 0 30px 25px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span,
+.ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before,
+.ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#V";
+  }
+
+  5% {
+    content: ".A";
+  }
+
+  10% {
+    content: "^{R";
+  }
+
+  15% {
+    content: "-!S";
+  }
+
+  20% {
+    content: "#$_H";
+  }
+
+  25% {
+    content: "№:0I";
+  }
+
+  30% {
+    content: "#{+.T";}35%{content: "@}-?A";
+  }
+
+  40% {
+    content: "?{4@%V";
+  }
+
+  45% {
+    content: "=.,^!A";
+  }
+
+  50% {
+    content: "?2@%S";
+  }
+
+  55% {
+    content: "\;1}]U";
+  }
+
+  60% {
+    content: "?{%:%D";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4E";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%V";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<Y";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%A";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'D";
+    right: 0;
+  }
+
+  90% {
+    content: "4A";
+    right: 0;
+  }
+
+  95% {
+    content: "2V";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+.bmi {
+  color: #fac921;
+  margin: 20px 0;
+}
+
+#bmi-index {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}

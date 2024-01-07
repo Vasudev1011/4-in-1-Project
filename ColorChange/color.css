@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d2d2d;
+}
+
+.main {
+  width: 50%;
+  margin: 40px auto;
+}
+
+.heading {
+  font-size: 30px;
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  color: antiquewhite;
+}
+
+.color-block {
+  width: 80%;
+  /* height: 70vh; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 5px auto;
+}
+
+.card {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 90px;
+  height: 130px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.color {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+}
+
+.card .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.card:hover::after {
+  opacity: 0;
+}
+
+.card:hover .color {
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+.footer {
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 90px;
+  text-align: center;
+  color: antiquewhite;
+}
